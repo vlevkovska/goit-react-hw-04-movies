@@ -20,7 +20,7 @@ export default function App() {
           </Suspense>
         </Route>
 
-        <Route path="/movies" exact>
+        <Route path="/movie" exact>
           <Suspense fallback={<div>Loading...</div>}>
             <MoviesView />
           </Suspense>
