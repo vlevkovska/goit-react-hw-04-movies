@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
-
-import PageHeading from "../Components/PageHeading/PageHeading";
-import MovieList from "../Components/MovieList/MovieList";
 import * as themoviedbAPI from "../services/themoviedb-api";
+
+// import PageHeading from "../Components/PageHeading/PageHeading";
+import MovieList from "../Components/MovieList/MovieList";
 
 export default function MoviesView() {
   const [inputValue, setInputValue] = useState("");

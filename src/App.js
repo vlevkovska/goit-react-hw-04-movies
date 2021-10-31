@@ -1,29 +1,43 @@
 import { Switch, Route } from "react-router";
+import { lazy, Suspense } from "react";
 // import Container from "./Components/Container/Container";
 import AppBar from "./Components/AppBar/AppBar";
-import HomeView from "./views/HomeView";
-import MoviesView from "./views/MoviesView";
-import MoviesDetailsView from "./views/MoviesDetailsView";
-
-// import "./App.css";
+import "./App.css";
+const HomeView = lazy(() => import("./views/HomeView"));
+const MoviesView = lazy(() => import("./views/MoviesView"));
+const MoviesDetailsView = lazy(() => import("./views/MoviesDetailsView"));
+const NotFoundView = lazy(() => import("./views/NotFoundView"));
 
 export default function App() {
   return (
     // <Container>
-    <>
+    <div className="container">
       <AppBar />
-      <Route path="/" exact>
-        <HomeView />
-      </Route>
+      <Switch>
+        <Route path="/" exact>
+          <Suspense fallback={<div>Loading...</div>}>
+            <HomeView />
+          </Suspense>
+        </Route>
 
-      <Route path="/movies" exact>
-        <MoviesView />
-      </Route>
+        <Route path="/movies" exact>
+          <Suspense fallback={<div>Loading...</div>}>
+            <MoviesView />
+          </Suspense>
+        </Route>
 
-      <Route path="/movies/:movieId" exact>
-        <MoviesDetailsView />
-      </Route>
+        <Route path="/movie/:movieId">
+          <Suspense fallback={<div>Loading...</div>}>
+            <MoviesDetailsView />
+          </Suspense>
+        </Route>
+
+        <Route>
+          <NotFoundView />
+          <Suspense fallback={<div>Loading...</div>}></Suspense>
+        </Route>
+      </Switch>
       {/* // </Container> */}
-    </>
+    </div>
   );
 }

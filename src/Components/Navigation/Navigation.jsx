@@ -19,7 +19,7 @@ const Navigation = () => (
     >
       Movies
     </NavLink>
-    <NavLink
+    {/* <NavLink
       exact
       to="/movies/:movieId"
       className={styles.link}
@@ -42,7 +42,7 @@ const Navigation = () => (
       activeClassName={styles.activeLink}
     >
       Reviews
-    </NavLink>
+    </NavLink> */}
   </nav>
 );
 
