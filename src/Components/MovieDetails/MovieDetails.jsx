@@ -59,7 +59,7 @@ export default function MovieDetails({ movieId }) {
           </div>
 
           <div>
-            Additional information
+            {movie.overview}
             <ul>
               <li className={styles.li}>
                 <NavLink

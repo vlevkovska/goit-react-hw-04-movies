@@ -20,15 +20,15 @@ export default function App() {
           </Suspense>
         </Route>
 
-        <Route path="/movie" exact>
+        <Route path="/movies/:movieId">
           <Suspense fallback={<div>Loading...</div>}>
-            <MoviesView />
+            <MoviesDetailsView />
           </Suspense>
         </Route>
 
-        <Route path="/movie/:movieId">
+        <Route path="/movies">
           <Suspense fallback={<div>Loading...</div>}>
-            <MoviesDetailsView />
+            <MoviesView />
           </Suspense>
         </Route>
 

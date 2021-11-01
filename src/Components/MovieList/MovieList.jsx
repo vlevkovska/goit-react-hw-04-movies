@@ -13,12 +13,12 @@ export default function MovieList({ movies }) {
               <Link
                 className={styles.a}
                 to={{
-                  pathname: `/movie/${id}`,
+                  pathname: `/movies/${id}`,
                   state: {
                     from:
                       location.pathname === "/"
                         ? "/"
-                        : "/movie" + location.search,
+                        : "/movies" + location.search,
                   },
                 }}
               >
