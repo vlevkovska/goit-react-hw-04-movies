@@ -44,7 +44,9 @@ export default function MovieDetails({ movieId }) {
             alt={movie.title}
           />
           <h2>{movie.title}</h2>
+          <p>Release date: {movie.release_date}</p>
           <p>Popularity: {movie.popularity}</p>
+          <p>Rating: {movie.vote_average}</p>
           <div>
             Genres:{" "}
             <ul>
@@ -56,10 +58,10 @@ export default function MovieDetails({ movieId }) {
                   ))
                 : "no genres"}
             </ul>
+            <p>{movie.overview}</p>
           </div>
-
+          <hr />
           <div>
-            {movie.overview}
             <ul>
               <li className={styles.li}>
                 <NavLink
