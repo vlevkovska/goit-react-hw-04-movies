@@ -6,11 +6,9 @@ import Reviews from "../Components/Reviews/Reviews";
 export default function MoviesDetailsView() {
   const { path } = useRouteMatch();
   const { movieId } = useParams();
-  //   const { original_title } = useParams();
 
   return (
     <>
-      {/* <PageHeading text={`Movie "${original_title}"`} /> */}
       <MovieDetails movieId={movieId} />
 
       <Switch>

@@ -15,6 +15,7 @@ export default function Reviews({ movieId }) {
           {reviews.results.map(({ id, author, content }) => (
             <li key={id}>
               <p>Author: {author}</p>
+              <p>{content}</p>
             </li>
           ))}
         </ul>

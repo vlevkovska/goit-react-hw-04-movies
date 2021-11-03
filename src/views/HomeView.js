@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import * as themoviedbAPI from "../services/themoviedb-api";
-// import PageHeading from "../Components/PageHeading/PageHeading";
 import MovieList from "../Components/MovieList/MovieList";
 
 export default function HomeView() {
@@ -14,7 +13,6 @@ export default function HomeView() {
 
   return (
     <>
-      {/* <PageHeading text="Добро пожаловать" /> */}
       <p>Trending today</p>
       <MovieList movies={movies} />;
     </>

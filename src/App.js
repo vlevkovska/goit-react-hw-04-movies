@@ -1,6 +1,5 @@
 import { Switch, Route } from "react-router";
 import { lazy, Suspense } from "react";
-// import Container from "./Components/Container/Container";
 import AppBar from "./Components/AppBar/AppBar";
 import "./App.css";
 const HomeView = lazy(() => import("./views/HomeView"));
@@ -10,7 +9,6 @@ const NotFoundView = lazy(() => import("./views/NotFoundView"));
 
 export default function App() {
   return (
-    // <Container>
     <div className="container">
       <AppBar />
       <Switch>
@@ -37,7 +35,6 @@ export default function App() {
           <Suspense fallback={<div>Loading...</div>}></Suspense>
         </Route>
       </Switch>
-      {/* // </Container> */}
     </div>
   );
 }

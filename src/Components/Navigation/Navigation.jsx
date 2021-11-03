@@ -19,31 +19,6 @@ const Navigation = () => (
     >
       Movies
     </NavLink>
-
-    {/* <NavLink
-      exact
-      to="/movies/:movieId"
-      className={styles.link}
-      activeClassName={styles.activeLink}
-    >
-      MovieDetailsPage
-    </NavLink>
-    <NavLink
-      exact
-      to="/movies/:movieId/cast"
-      className={styles.link}
-      activeClassName={styles.activeLink}
-    >
-      Cast
-    </NavLink>
-    <NavLink
-      exact
-      to="/movies/:movieId/reviews"
-      className={styles.link}
-      activeClassName={styles.activeLink}
-    >
-      Reviews
-    </NavLink> */}
   </nav>
 );
 
